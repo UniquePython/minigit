@@ -1,23 +1,19 @@
 # Contributing to MiniGit
 
-Thanks for considering contributing to MiniGit!
+Thanks for thinking about contributing! 🚀
 
-## 🛠 Local Setup
+## 📋 Steps to Contribute
+1. Fork the repo
+2. Clone your fork
+3. Create a new branch: `git checkout -b fix-bug-xyz`
+4. Make your changes
+5. Push to your fork: `git push origin fix-bug-xyz`
+6. Open a Pull Request
 
-1. Fork the repo and clone it:
-```bash
-git clone https://github.com/yourusername/minigit.git
-cd minigit
-```
+## 💡 Guidelines
+- Write clear commit messages
+- Comment your code
+- Keep PRs focused (one feature/bug at a time)
+- Follow existing code style
 
-2. Make changes in a new branch:
-```bash
-git checkout -b fix-bug-123
-```
-
-3. Push and make a Pull Request!
-
-## 📢 Communication
-
-- Create an issue before major changes.
-- Mention if you’re a beginner — we love helping!
+We’ll review your PR ASAP!
