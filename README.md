@@ -13,6 +13,7 @@ A lightweight, simplified version of Git built from scratch in Python — for le
 git clone https://github.com/yourusername/minigit.git
 cd minigit
 python3 minigit.py  # or however you run it
+```
 
 ## 🚀 Usage
 
@@ -21,6 +22,7 @@ python3 minigit.py init
 python3 minigit.py add myfile.txt
 python3 minigit.py commit "Initial commit"
 python3 minigit.py status
+```
 
 ## 👥 Contributing
 Got ideas? Found bugs? Want to help build a better MiniGit? Check out the [issues](https://github.com/UniquePython/minigit/issues) or start a discussion!
