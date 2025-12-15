@@ -7,6 +7,7 @@ import init
 import tree
 import commit
 import log
+import cat_file
 import checkout
 
 def main():
@@ -37,6 +38,11 @@ def main():
     
     # log command
     subparsers.add_parser("log", help="Show commit history")
+    
+    # cat-file command
+    cat_parser = subparsers.add_parser("cat-file", help="Show object contents")
+    cat_parser.add_argument("object_id", type=str)
+
 
     args = parser.parse_args()
 
@@ -67,6 +73,9 @@ def main():
 
     elif args.command == "log":
         log.log()
+
+    elif args.command == "cat-file":
+        cat_file.cat_file(args.object_id)
 
 
 if __name__ == "__main__":

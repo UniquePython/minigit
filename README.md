@@ -73,7 +73,9 @@ python main.py log
 
 - `commit.py` – Creates and reads commit objects.
 
-- `log.py` - Displays the commit history of the current mini-git repository.
+- `log.py` - Displays the commit history of the current repository.
+
+- `cat_file.py` - Displays the contents of a stored object.
 
 - `checkout.py` – Restores the working directory to a specific commit.
 
