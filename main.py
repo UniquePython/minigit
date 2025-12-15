@@ -6,6 +6,7 @@ from pathlib import Path
 import init
 import tree
 import commit
+import log
 import checkout
 
 def main():
@@ -33,6 +34,9 @@ def main():
     checkout_parser.add_argument(
         "-d", "--directory", type=str, default=".", help="Directory to restore files into"
         )
+    
+    # log command
+    subparsers.add_parser("log", help="Show commit history")
 
     args = parser.parse_args()
 
@@ -60,6 +64,9 @@ def main():
         commit_id = args.commit_id
         checkout.checkout(commit_id, Path(args.directory))
         print(f"Checked out commit: {commit_id}")
+
+    elif args.command == "log":
+        log.log()
 
 
 if __name__ == "__main__":

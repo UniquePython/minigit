@@ -53,6 +53,12 @@ python main.py checkout <commit_id> -d <directory>
 
 - `-d` or `--directory`: Directory to restore files into (default: current directory)
 
+### Log commit history
+
+```bash
+python main.py log
+```
+
 ---
 
 ## File Structure
@@ -66,6 +72,8 @@ python main.py checkout <commit_id> -d <directory>
 - `config.py` – Reads username/email configuration.
 
 - `commit.py` – Creates and reads commit objects.
+
+- `log.py` - Displays the commit history of the current mini-git repository.
 
 - `checkout.py` – Restores the working directory to a specific commit.
 
