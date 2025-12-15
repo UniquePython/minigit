@@ -1,8 +1,8 @@
 """Handles object hashing, storage, and retrieval."""
 
 import hashlib
-
 from pathlib import Path
+import zlib
 
 def hash_bytes(input_file: Path) -> tuple[str, bytes]:
     """This function takes a file and hashes its contents.
@@ -36,7 +36,8 @@ def store_object(object_id: str, data: bytes) -> None:
     file_path = sub_dir / object_id[2:]
 
     if not file_path.exists():
-        file_path.write_bytes(data)
+        compressed = zlib.compress(data)
+        file_path.write_bytes(compressed)
 
 
 def read_object(object_id: str) -> tuple[str, bytes]:
@@ -51,7 +52,8 @@ def read_object(object_id: str) -> tuple[str, bytes]:
     if not object_path.exists():
         raise FileNotFoundError(f"No blob found at {object_path}")
     
-    raw = object_path.read_bytes()
+    compressed = object_path.read_bytes()
+    raw = zlib.decompress(compressed)
     header, content = raw.split(b"\0", 1)
     
     header_text = header.decode()
