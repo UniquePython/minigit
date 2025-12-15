@@ -1,3 +1,5 @@
+"""Command-line interface to interact with the repository."""
+
 import argparse
 from pathlib import Path
 
@@ -12,19 +14,25 @@ def main():
 
     # init command
     init_parser = subparsers.add_parser("init", help="Initialize a new repository")
-    init_parser.add_argument("-d", "--directory", type=str, default=".", help="Directory to initialize repo in")
+    init_parser.add_argument(
+        "-d", "--directory", type=str, default=".", help="Directory to initialize repo in"
+        )
     init_parser.add_argument("--name", type=str, default="null", help="Author/committer name")
     init_parser.add_argument("--email", type=str, default="null", help="Email for commits")
 
     # commit command
     commit_parser = subparsers.add_parser("commit", help="Create a new commit")
     commit_parser.add_argument("-m", "--message", type=str, required=True, help="Commit message")
-    commit_parser.add_argument("-d", "--directory", type=str, default=".", help="Directory to commit")
+    commit_parser.add_argument(
+        "-d", "--directory", type=str, default=".", help="Directory to commit"
+        )
 
     # checkout command
     checkout_parser = subparsers.add_parser("checkout", help="Checkout a commit")
     checkout_parser.add_argument("commit_id", type=str, help="Commit hash to checkout")
-    checkout_parser.add_argument("-d", "--directory", type=str, default=".", help="Directory to restore files into")
+    checkout_parser.add_argument(
+        "-d", "--directory", type=str, default=".", help="Directory to restore files into"
+        )
 
     args = parser.parse_args()
 

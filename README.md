@@ -59,7 +59,7 @@ python main.py checkout <commit_id> -d <directory>
 
 - `blob.py` – Handles object hashing, storage, and retrieval.
 
-- `TreeEntry.py` – Dataclass representing a tree entry (file or directory).
+- `tree_entry.py` – Dataclass representing a tree entry (file or directory).
 
 - `tree.py` – Creates and reads tree objects representing directories.
 

@@ -1,10 +1,10 @@
-import TreeEntry
+"""Creates and reads tree objects representing directories."""
 
-import blob
-
-import os
 import hashlib
 from pathlib import Path
+
+import tree_entry
+import blob
 
 def write_tree(directory: Path) -> str:
     """Create a tree object from a directory and store it in the object database.
@@ -49,7 +49,7 @@ def write_tree(directory: Path) -> str:
     return tree_id
 
 
-def read_tree(object_id: str) -> list[TreeEntry.TreeEntry]:
+def read_tree(object_id: str) -> list[tree_entry.TreeEntry]:
     """Read a tree object from the object database and parse its entries.
 
     Args:
@@ -60,7 +60,7 @@ def read_tree(object_id: str) -> list[TreeEntry.TreeEntry]:
     if obj_type != "tree":
         raise ValueError("Object is not a tree")
 
-    entries: list[TreeEntry.TreeEntry] = []
+    entries: list[tree_entry.TreeEntry] = []
     i = 0
 
     while i < len(content):
@@ -79,6 +79,6 @@ def read_tree(object_id: str) -> list[TreeEntry.TreeEntry]:
         object_id = oid_bytes.hex()
         i += 32
 
-        entries.append(TreeEntry.TreeEntry(mode, name, object_id))
+        entries.append(tree_entry.TreeEntry(mode, name, object_id))
 
     return entries

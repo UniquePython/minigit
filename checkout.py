@@ -1,3 +1,5 @@
+"""Restores the working directory to a specific commit."""
+
 import shutil
 from pathlib import Path
 

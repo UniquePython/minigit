@@ -1,3 +1,5 @@
+"""Creates and reads commit objects."""
+
 import time
 import hashlib
 from pathlib import Path

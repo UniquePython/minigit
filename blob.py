@@ -1,3 +1,5 @@
+"""Handles object hashing, storage, and retrieval."""
+
 import hashlib
 
 from pathlib import Path

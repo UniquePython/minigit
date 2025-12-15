@@ -1,7 +1,9 @@
+"""Initializes a new repository and stores configuration."""
+
 from pathlib import Path
 from configparser import ConfigParser
 
-def init_repo(dir: Path, name: str = "null", email: str = "null") -> None:
+def init_repo(directory: Path, name: str = "null", email: str = "null") -> None:
     """
     Initialize a new mini-git repository in the current directory.
 
@@ -10,7 +12,7 @@ def init_repo(dir: Path, name: str = "null", email: str = "null") -> None:
         name (str): Author/committer name
         email (str): Optional email for commits
     """
-    repo_dir = dir / ".minigit"
+    repo_dir = directory / ".minigit"
     objects_dir = repo_dir / "objects"
     config_file = repo_dir / "config"
     head_file = repo_dir / "HEAD"
