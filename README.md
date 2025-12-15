@@ -1,3 +1,5 @@
+![Mini-Git image](repository-img.png "Mini Git Image")
+
 # Mini-Git
 
 Mini-Git is a lightweight implementation of a Git-like version control system in Python. It allows you to initialize a repository, create commits, and checkout previous commits using SHA-256 based object storage.
