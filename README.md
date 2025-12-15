@@ -19,7 +19,12 @@ No external dependencies are required beyond the Python standard library.
 
 ## Usage
 
-The CLI interface provides three main commands: `init`, `commit`, and `checkout`.
+The CLI interface provides the following commands: 
+- `init` 
+- `commit`
+- `checkout`
+- `log`
+- `cat-file`
 
 ### Initialize a repository
 
@@ -58,6 +63,14 @@ python main.py checkout <commit_id> -d <directory>
 ```bash
 python main.py log
 ```
+
+### Cat-file
+
+```bash
+python main.py cat-file <object-id>
+```
+
+- `<object-id>`: SHA-256 hash of the object to view the contents of
 
 ---
 
