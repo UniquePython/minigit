@@ -1,8 +1,14 @@
 ![Mini-Git image](repository-img.png "Mini Git Image")
 
-# Mini-Git
+# Mini-Git ![Static Badge](https://img.shields.io/badge/Python-3.10%2B-green)
 
 Mini-Git is a lightweight implementation of a Git-like version control system in Python. It allows you to initialize a repository, create commits, and checkout previous commits using SHA-256 based object storage.
+
+---
+
+## Goal
+
+This project is only intended as a learning exercise to explore how Git works internally. This is missing a lot of features and optimizations that Git supports, and thus is not meant to be used as a substitute for Git. However, if you insist, give it a try for sure!
 
 ---
 
@@ -97,6 +103,18 @@ python main.py cat-file <object-id>
 - `init.py` – Initializes a new repository and stores configuration.
 
 - `main.py` – Command-line interface to interact with the repository.
+
+---
+
+## Coming soon ...
+
+- Branch Refs
+- Detached HEAD vs symbolic HEAD
+- Diffing trees
+- Partial checkouts
+- Packfiles
+- Executable version so that you can run it as a standalone program
+- Test suite (eventually 😅)
 
 ---
 
